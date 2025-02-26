@@ -28,9 +28,8 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
-@app.route('/marlon')
-def marlon():
-    
+@app.route('/marlon', methods=['GET'])
+def marlon():    
     marlon = Marlon()
     return render_template('marlon.html', mensagem = marlon.mensagem('Marlon Andrei'))
 
