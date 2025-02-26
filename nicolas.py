@@ -1,5 +1,5 @@
 class Nicolas:
-     
+      
     @staticmethod
     def mensagem(nome):
         return f"Olá meu grande mundo, aqui é o {nome}!"
