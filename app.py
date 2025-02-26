@@ -78,7 +78,7 @@ def joaoBrugnolo():
 def nicolas():    
     try:
         nicolas = Nicolas()
-        valor = nicolas.hipotenusa(40,20) 
+        valor = nicolas.raizes(2,3,-5) 
         return render_template('valor.html', valor = valor)
     except Exception as e:
         return render_template('valor.html', valor = str(e))
