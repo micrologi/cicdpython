@@ -1,5 +1,5 @@
 import os
-import marlon
+#import marlon
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
@@ -30,8 +30,7 @@ def hello():
 
 @app.route('/marlon')
 def marlon():
-    marlon = Marlon("Marlon")
-    return render_template('marlon.html', mensagem = marlon.mensagem())
+    return render_template('marlon.html', mensagem = 'testando')
 
 if __name__ == '__main__':
    app.run()
