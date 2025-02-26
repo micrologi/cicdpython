@@ -1,4 +1,4 @@
-class enzo:
+class Enzoc:
      
     @staticmethod
     def mensagem(nome):
@@ -7,6 +7,6 @@ class enzo:
 
      
     @staticmethod
-    def hipotenusa(ladoa, labob):
-       valor = (ladoa**2 + ladob**2)**0.5
+    def hipotenusa(ladoa, ladob):
+       valor = (ladoa**2 + ladob **2)**0.5
        return f"o valor da hipotenusa é {valor}"
