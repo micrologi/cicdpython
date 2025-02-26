@@ -54,8 +54,14 @@ def enzoc():
 def enzot():    
     try:
         enzot = Enzot()
-        valor = enzot.hipotenusa(40,20) 
+    
+        #valor = enzot.hipotenusa(40,20) 
+        #return render_template('valor.html', valor = valor)
+    
+        valor = enzot.raizes(2,3,-5) 
         return render_template('valor.html', valor = valor)
+    
+    
     except Exception as e:
         return render_template('valor.html', valor = str(e))
 
