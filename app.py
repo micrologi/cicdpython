@@ -77,5 +77,6 @@ def nicolas():
     except Exception as e:
         return render_template('valor.html', valor = str(e))
 
+
 if __name__ == '__main__':
    app.run()
