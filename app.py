@@ -30,7 +30,9 @@ def hello():
 
 @app.route('/marlon', methods=['GET'])
 def marlon():    
-    return redirect(url_for('index'))
+    marlon = Marlon()
+    mens = marlon.mensagem('Marlon Andrei') 
+    return render_template('valor.html', valor = mens)
 
 if __name__ == '__main__':
    app.run()
