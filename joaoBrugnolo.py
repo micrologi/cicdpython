@@ -6,7 +6,7 @@ class JoaoBrugnolo:
 
     
     @staticmethod
-    def calcHipotenusa(catetoA, catetoB):
+    def hipotenusa(catetoA, catetoB):
         resultado = (catetoA**2 + catetoB**2)**0.5
         return f"O resultado da hipotenusa é: {resultado}"
 
