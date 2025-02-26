@@ -30,12 +30,7 @@ def hello():
 
 @app.route('/marlon', methods=['GET'])
 def marlon():    
-    try:
-        marlon = Marlon()
-        mens = marlon.mensagem('Marlon Andrei') 
-        return render_template('valor.html', valor = mens)
-    except Exception as e:
-        return render_template('valor.html', valor = str(e))
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
    app.run()
