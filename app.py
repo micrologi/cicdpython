@@ -1,4 +1,5 @@
 import os
+import marlon
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
@@ -27,6 +28,10 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+@app.route('/marlon')
+def marlon():
+    marlon = Marlon("Marlon")
+    return render_template('marlon.html', name = 'Marlon Andrei')
 
 if __name__ == '__main__':
    app.run()
