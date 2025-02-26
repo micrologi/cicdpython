@@ -15,6 +15,6 @@ class Enzot:
 
     @staticmethod
     def raizes(a, b, c):
-        x1 = (-1*b) ((-4 * a * c + b**2)**0.5) / (2*a)
-        x2 = (-1*b) ((-4 * a * c + b**2)**0.5) / (2*a)
+        x1 = ((-1*b) + (((-4 * a * c) + (b**2))**0.5)) / (2*a)
+        x2 = ((-1*b) - (((-4 * a * c) + (b**2))**0.5)) / (2*a)
         return f"O resultado das contas são x1: {x1}, x2: {x2}"
