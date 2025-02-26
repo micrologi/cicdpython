@@ -31,8 +31,8 @@ def hello():
 @app.route('/marlon')
 def marlon():
     
-    marlon = Marlon("Marlon Andrei")
-    return render_template('marlon.html', mensagem = marlon.mensagem())
+    marlon = Marlon()
+    return render_template('marlon.html', mensagem = marlon.mensagem('Marlon Andrei'))
 
 if __name__ == '__main__':
    app.run()
