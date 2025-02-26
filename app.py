@@ -1,5 +1,9 @@
 import os
 from marlon import Marlon
+from enzoc import Enzoc
+from enzot import Enzot
+from joaoBrugnolo import JoaoBrugnolo
+from nicolas import Nicolas
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
@@ -32,8 +36,44 @@ def hello():
 def marlon():    
     try:
         marlon = Marlon()
-        mens = marlon.mensagem('Marlon Andrei de Carvalho') 
-        return render_template('valor.html', valor = mens)
+        valor = marlon.hipotenusa(40,20) 
+        return render_template('valor.html', valor = valor)
+    except Exception as e:
+        return render_template('valor.html', valor = str(e))
+
+@app.route('/enzoc', methods=['GET'])
+def enzoc():    
+    try:
+        enzoc = Enzoc()
+        valor = enzoc.hipotenusa(40,20) 
+        return render_template('valor.html', valor = valor)
+    except Exception as e:
+        return render_template('valor.html', valor = str(e))
+
+@app.route('/enzot', methods=['GET'])
+def enzot():    
+    try:
+        enzot = Enzot()
+        valor = enzot.hipotenusa(40,20) 
+        return render_template('valor.html', valor = valor)
+    except Exception as e:
+        return render_template('valor.html', valor = str(e))
+
+@app.route('/joaoBrugnolo', methods=['GET'])
+def joaoBrugnolo():    
+    try:
+        joaoBrugnolo = JoaoBrugnolo()
+        valor = joaoBrugnolo.hipotenusa(40,20) 
+        return render_template('valor.html', valor = valor)
+    except Exception as e:
+        return render_template('valor.html', valor = str(e))
+
+@app.route('/nicolas', methods=['GET'])
+def nicolas():    
+    try:
+        nicolas = Nicolas()
+        valor = nicolas.hipotenusa(40,20) 
+        return render_template('valor.html', valor = valor)
     except Exception as e:
         return render_template('valor.html', valor = str(e))
 
